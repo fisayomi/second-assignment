@@ -4,7 +4,7 @@
   var chai = require('chai');
   var expect = chai.expect;
 
-  var my = require('../app/lib3.js');
+  var my = require('../app/oop.js');
 
   describe("Car Class: Create a car, make it drive", function() {
 
