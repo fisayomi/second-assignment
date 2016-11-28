@@ -1,18 +1,18 @@
 'use strict';
   var chai = require('chai');
   var expect = chai.expect;
-  var myApp = require('../app/lib4.js');
+  var myApp = require('../app/prime.js');
 
 
 describe("Get Prime tests ", function() {
 	describe("Case for some falsy values", function() {
 
 	    it("should return 'no value' for null", function() {
-	      expect(myApp.getPrime(null)).to.equal('no value');
+	      expect(myApp.getPrime(null)).to.be.equal('no value');
 	    });
 
 	    it("should return 'no value' for undefined", function() {
-	      expect(myApp.getPrime(undefined)).to.equal('no value');
+	      expect(myApp.getPrime(undefined)).to.be.equal('no value');
 	    });
 
 	describe("Case for Negative numbers and numbers less than '2'", function() {
@@ -22,6 +22,10 @@ describe("Get Prime tests ", function() {
 
 	    it("should return 'Invalid Input' for `-100`", function() {
 	      expect(myApp.getPrime(-100)).to.be.equal('Invalid Input');
+	    });
+
+	    it("should return 'Invalid Input' for `1`", function() {
+	      expect(myApp.getPrime(1)).to.be.equal('Invalid Input');
 	    });
 	});
 
